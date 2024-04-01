@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+<h1 align="center" id="title">Cinemavericks</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+1. [Project Description](#project-description)
+2. [Installation instructions](#installation-instructions)
+3. [Usage](#usage)
+4. [Contributing Instructions](#contributing-instructions)
+5. [Credits and Acknowledgements](credits-and-acknowledgements)
+6. [Licences](#licences)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+This front-end project utilised JavaScript, the React Library...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The motivation behind this project was ...
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**The names and versions of libraries used:**
+- 
+- 
+- 
+- 
+- 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### MVP
+- 
+- 
+- 
+- 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Extensions
+- 
+- 
+- 
+- 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Wireframe
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Component diagram
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### The URL of the GitHub repository that contains the code:
 
-### Advanced Configuration
+https://github.com/Jean-005/cinemavericks-react-front-end
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Installation instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Client-side**
 
-### `npm run build` fails to minify
+- Install Node.js ...
+- In terminal or Gitbash, navigate to the directory you want to copy the repository into. 
+- Run the command ```git clone git@github.com:Jean-005/cinemavericks-react-front-end.git```
+- Run the command **git pull** to ensure you have the latest version.
+- Open the react project in the preferred IDE such as Visual Studio Code.
+- Open the intergrate terminal and run the command ```npm install``` followed by ```npm start```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Server-side**
+
+- Install Postman, Postico, PostgreSQL and your preferred IDE.
+- In terminal or Gitbash, navigate to the directory you want to copy the repository into. 
+- Run the command ```git clone git@github.com:Jean-005/Cinemavericks_back-end.git```
+- In the terminal or Gitbash, create the database called cinemavericks_db by running the command ```createdb cinemavericks_db```.
+- In the terminal run the command ```./mvnw spring-boot:run```
+
+
+## Usage
+
+
+
+
+
+
+
+## Contributing Instructions
+
+We appreciate your interest in contributing to the Cinemavericks Project. We welcome contributions of all kinds, from bug reports and documentation improvements to new features and code changes.
+
+Find below our contributing guidelines. By following these guidelines, you'll help us to maintain a high quality codebase and make the review process smoother for everyone.
+
+**1. Fork the Repository:** Create a fork of the Cinemavericks repository on GitHub.
+
+**2. Create a Branch:** Clone the forked repository to your local machine & create a new branch for your contribution.
+
+**3.Make Changes:** Make your changes to the code & ensure your changes follow our coding style.
+
+**4. Commit Your Changes:** Commit your changes to your local branch with a descriptive commit message.
+
+**5. Push Your Changes:** Push your changes to your forked repository on GitHub.
+     
+**6. Create a Pull Request:** Open a pull request from your branch to the main branch of the upstream repository.
+
+**7. Review and Feedback:** We will review your pull request and provide feedback.
+
+
+
+
+## Credits and Acknowledgements
+
+### The Cinemarvs Collaborators:
+- Harun - GitHub: 
+- Laura  - Github: 
+- Tadiwa - Github:
+- Vivian - Github:
+- Jean Marwizi 	- Github: https://github.com/Jean-005
+
+### Special thanks to:
+
+- Anna Henderson
+- Colin Farquhar
+- Richard Sneyd
+- Thibyaa Mahasivam
+- Zsolt Podoba-Szalai
+
+**For their invaluable guidance and assistance with this project.**
+
+
+## Licences
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
