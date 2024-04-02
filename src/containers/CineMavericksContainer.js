@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Navigation from "../components/Navigation";
 
 const CineMavericksContainer = () => {
     
@@ -28,21 +29,21 @@ const CineMavericksContainer = () => {
         setHighestRatedMovies(sortedData.slice(0,5));
     };
     
-    const cineMaverickRoutes = createBrowserRouter([
-        {
-            path: "/",
-            element: <Navigation />,
-            children: [
-                {                   // cinema.js
-                    path: "/",
-                    element:
-                },                 
-                {                   // movies.js
+    // const cineMaverickRoutes = createBrowserRouter([
+    //     {
+    //         path: "/",
+    //         element: <Navigation />,
+    //         children: [
+    //             {                   // cinema.js
+    //                 path: "/",
+    //                 element:
+    //             },                 
+    //             {                   // movies.js
 
-                }                  
-            ]
-        }
-    ]);
+    //             }                  
+    //         ]
+    //     }
+    // ]);
 
 
     useEffect(() => {
