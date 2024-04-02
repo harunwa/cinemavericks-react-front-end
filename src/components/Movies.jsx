@@ -1,4 +1,5 @@
 import MovieList from "./MovieList";
+
 const Movies = ({movies}) => {
     return ( 
         <>
