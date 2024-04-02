@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const CineMavericksContainer = () => {
     
@@ -27,6 +27,13 @@ const CineMavericksContainer = () => {
         setHighestRatedMovies(sortedData.slice(0,5));
     };
     
+
+    useEffect(() => {
+        fetchMovies();
+        fetchMovieLists();
+        fetchHighestRatedMovies();
+    }, []);
+
     return (  
         <>
 
