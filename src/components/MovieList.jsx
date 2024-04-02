@@ -1,4 +1,4 @@
-const MovieList = ({listOfMovies}) => {
+const MovieList = ({listOfMovies, title}) => {
 
     const MovieComponents = listOfMovies.map(movie => {
         return <li> {movie.title} </li>
@@ -7,7 +7,10 @@ const MovieList = ({listOfMovies}) => {
 
     return (  
         <>
-            <ul>{MovieComponents}</ul>
+            <section>
+                <h3>{title}</h3>
+                <ul>{MovieComponents}</ul>
+            </section>
         </>
     );
 }

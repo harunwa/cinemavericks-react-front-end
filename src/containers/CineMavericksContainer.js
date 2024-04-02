@@ -38,7 +38,7 @@ const CineMavericksContainer = () => {
             element: <Navigation />,
             children: [
                 {                  
-                    path: "/cinema", 
+                    path: "/cinema/:userId", 
                     element: <Cinema 
                         movies={movies}
                         highestRatedMovies={highestRatedMovies}
@@ -50,7 +50,7 @@ const CineMavericksContainer = () => {
                     element: <Movies 
                         movies={movies}
                     />
-                }                  
+                }                
             ]
         }
     ]);
