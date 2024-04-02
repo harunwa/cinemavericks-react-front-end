@@ -39,11 +39,17 @@ const CineMavericksContainer = () => {
             children: [
                 {                  
                     path: "/cinema", 
-                    element: <Cinema />
+                    element: <Cinema 
+                        movies={movies}
+                        highestRatedMovies={highestRatedMovies}
+                        movieLists={movieLists}
+                    />
                 },                 
                 {
                     path: "/movies",
-                    element: <Movies />
+                    element: <Movies 
+                        movies={movies}
+                    />
                 }                  
             ]
         }
