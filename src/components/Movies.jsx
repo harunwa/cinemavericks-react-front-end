@@ -2,7 +2,7 @@ import MovieList from "./MovieList";
 const Movies = ({movies}) => {
     return ( 
         <>
-            <MovieList movies = {movies} />
+            <MovieList listOfMovies = {movies} />
         </>
      );
 }

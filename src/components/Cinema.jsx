@@ -1,7 +1,21 @@
-const Cinema = () => {
+import MovieList from "./MovieList";
+
+const Cinema = ({movies, highestRatedMovies, movieLists}) => {
+    
+    const userReviewedMovies = () => {}
+
+    
     return ( 
         <>
-            <h1>CINEMA</h1>
+            <div> A FUN GRAPHIC INSERTED HERE</div>
+            <main>
+                <MovieList 
+                    listOfMovies={highestRatedMovies}
+                />
+                {/* <MovieList 
+                    listOfMovies={userReviewedMovies}
+                /> */}
+            </main>
         </>
      );
 }
