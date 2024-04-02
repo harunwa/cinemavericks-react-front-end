@@ -8,8 +8,7 @@ const MovieList = ({listOfMovies, title}) => {
             <li>{movie.title}</li> 
             <MovieThumbnail movie={movie}/>
         </>
-    }) 
-
+    });
 
     return (  
         <>
