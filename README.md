@@ -116,7 +116,7 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 
 ### The Cinemarvs Collaborators:
 - Harun - GitHub: 
-- Laura  - Github: 
+- Laura Harper      - Github: https://github.com/h-larper
 - Tadiwa - Github:
 - Vivian - Github:
 - Jean Marwizi 	- Github: https://github.com/Jean-005
