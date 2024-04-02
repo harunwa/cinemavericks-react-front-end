@@ -30,18 +30,21 @@ The motivation behind this project was ...
 
 
 ### MVP
-- 
-- 
-- 
-- 
+- Having a landing page that filters a list to display the highest rated movies and movies the user has reviewed.
+- A movie page that displays a list of reviews and has functionality whereby users can add a review.
+- A navbar that is shared across all pages.
+- Intuitive UI/UX
 
 
 ### Extensions
-- 
-- 
-- 
-- 
 
+- Be able to filter by genre, minimum duration, and minimum rating.
+- A 'My reviews' page where users can view, edit or delete reviews for specific movies.
+- Have a page that shows all the public movies list. 
+- Add CRUD functionality for movie list.
+- Add CRUD functionality for users list.
+- Add capability to allow users to change default language from English..
+- Add darkmode/light mode functionality
 
 
 ### Wireframe
