@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Cinema from "../components/Cinema";
 import Movies from "../components/Movies";
+import Movie from "../components/Movie";
 
 const CineMavericksContainer = () => {
     
@@ -31,6 +32,12 @@ const CineMavericksContainer = () => {
         setHighestRatedMovies(sortedData.slice(0,5));
     };
 
+    const movieLoader = ({params}) => {
+        return movies.find(movie => {
+            return movie.id === parseInt(params.id);
+        });
+    }
+
     
     const cineMaverickRoutes = createBrowserRouter([
         {
@@ -58,6 +65,11 @@ const CineMavericksContainer = () => {
                     element: <Movies 
                         movies={movies}
                     />
+                },
+                {
+                    path: "/movies/:id",
+                    loader: movieLoader,
+                    element: <Movie />
                 }                
             ]
         }

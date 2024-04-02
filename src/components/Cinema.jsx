@@ -23,9 +23,6 @@ const Cinema = ({movies, highestRatedMovies, movieLists}) => {
         return <></>;
     }
 
-    console.log(userReviewedMovies);
-
-
     return ( 
         <>
             <div> A FUN GRAPHIC INSERTED HERE</div>
