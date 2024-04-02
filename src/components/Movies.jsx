@@ -1,7 +1,8 @@
-const Movies = () => {
+import MovieList from "./MovieList";
+const Movies = ({movies}) => {
     return ( 
         <>
-            <h1> MOVIES </h1>
+            <MovieList movies = {movies} />
         </>
      );
 }
