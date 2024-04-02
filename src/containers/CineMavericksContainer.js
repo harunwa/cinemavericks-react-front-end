@@ -37,14 +37,28 @@ const CineMavericksContainer = () => {
             path: "/",
             element: <Navigation />,
             children: [
+                {
+                    path: "/cinema",
+                    element: <Cinema 
+                        movies={movies}
+                        highestRatedMovies={highestRatedMovies}
+                        movieLists={movieLists}
+                    />
+                },
                 {                  
-                    path: "/cinema", 
-                    element: <Cinema />
+                    path: "/cinema/:userId", 
+                    element: <Cinema 
+                        movies={movies}
+                        highestRatedMovies={highestRatedMovies}
+                        movieLists={movieLists}
+                    />
                 },                 
                 {
                     path: "/movies",
-                    element: <Movies />
-                }                  
+                    element: <Movies 
+                        movies={movies}
+                    />
+                }                
             ]
         }
     ]);
