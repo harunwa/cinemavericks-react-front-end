@@ -21,7 +21,10 @@ const CineMavericksContainer = () => {
     const fetchHighestRatedMovies = async () => {
         const response = await fetch("");
         const data = await response.json();
-        setHighestRatedMovies(data);
+        const sortedData = data.sort((movie1, movie2) => {
+            return movie1.average_rating - movie2.average_rating;
+        })
+        setHighestRatedMovies(sortedData.slice(0,5));
     };
     
     return (  
