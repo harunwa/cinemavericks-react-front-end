@@ -5,8 +5,8 @@ const Navigation = () => {
         <>
             <nav>
                 <ul>
-                    <li> Home </li>
-                    <li> Movies</li>
+                    <li><Link to="/cinema">Home</Link></li>
+                    <li><Link to="/movies">Movies</Link></li>
                 </ul>
             </nav>
             <Outlet />

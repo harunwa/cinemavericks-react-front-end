@@ -32,21 +32,22 @@ const CineMavericksContainer = () => {
     };
 
     
-    // const cineMaverickRoutes = createBrowserRouter([
-    //     {
-    //         path: "/",
-    //         element: <Navigation />,
-    //         children: [
-    //             {                   // cinema.js
-    //                 path: "/",
-    //                 element:
-    //             },                 
-    //             {                   // movies.js
-
-    //             }                  
-    //         ]
-    //     }
-    // ]);
+    const cineMaverickRoutes = createBrowserRouter([
+        {
+            path: "/",
+            element: <Navigation />,
+            children: [
+                {                  
+                    path: "/cinema", 
+                    element: <Cinema />
+                },                 
+                {
+                    path: "/movies",
+                    element: <Movies />
+                }                  
+            ]
+        }
+    ]);
 
 
     useEffect(() => {
@@ -57,9 +58,7 @@ const CineMavericksContainer = () => {
 
     return (  
         <>
-           {/* <RouterProvider router={cineMaverickRoutes}/> */}
-           <Cinema movies={movies} movieLists={movieLists} highestRatedMovies={highestRatedMovies}/>
-           <Movies movies={movies}/>
+           <RouterProvider router={cineMaverickRoutes}/>
         </>
     );
 }
