@@ -37,7 +37,7 @@ const CineMavericksContainer = () => {
             element: <Navigation />,
             children: [
                 {                  
-                    path: "/cinema",    // cinema.js
+                    path: "/cinema", 
                     element: <Cinema />
                 },                 
                 {
@@ -58,8 +58,6 @@ const CineMavericksContainer = () => {
     return (  
         <>
            <RouterProvider router={cineMaverickRoutes}/>
-           <Cinema movies={movies} movieLists={movieLists} highestRatedMovies={highestRatedMovies}/>
-           <Movies movies={movies}/>
         </>
     );
 }
