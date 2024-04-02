@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navigation from "../components/Navigation";
+import Cinema from "../components/Cinema";
+import Movies from "../components/Movies";
 
 const CineMavericksContainer = () => {
     
@@ -54,7 +56,7 @@ const CineMavericksContainer = () => {
 
     return (  
         <>
-           <RouterProvider router={cineMaverickRoutes}/>
+           {/* <RouterProvider router={cineMaverickRoutes}/> */}
            <Cinema movies={movies} movieLists={movieLists} highestRatedMovies={highestRatedMovies}/>
            <Movies movies={movies}/>
         </>
