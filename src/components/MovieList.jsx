@@ -1,7 +1,13 @@
+import MovieThumbnail from "./MovieThumbnail";
+
+
 const MovieList = ({listOfMovies, title}) => {
 
     const MovieComponents = listOfMovies.map(movie => {
-        return <li> {movie.title} </li>
+        return <>
+            <li>{movie.title}</li> 
+            <MovieThumbnail movie={movie}/>
+        </>
     }) 
 
 
