@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const CineMavericksContainer = () => {
     
@@ -27,6 +28,22 @@ const CineMavericksContainer = () => {
         setHighestRatedMovies(sortedData.slice(0,5));
     };
     
+    const cineMaverickRoutes = createBrowserRouter([
+        {
+            path: "/",
+            element: <Navigation />,
+            children: [
+                {                   // cinema.js
+                    path: "/",
+                    element:
+                },                 
+                {                   // movies.js
+
+                }                  
+            ]
+        }
+    ]);
+
 
     useEffect(() => {
         fetchMovies();
@@ -36,7 +53,9 @@ const CineMavericksContainer = () => {
 
     return (  
         <>
-
+           <RouterProvider router={cineMaverickRoutes}/>
+           <Cinema movies={movies} movieLists={movieLists} highestRatedMovies={highestRatedMovies}/>
+           <Movies movies={movies}/>
         </>
     );
 }
