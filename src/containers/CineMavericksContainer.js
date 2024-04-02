@@ -30,6 +30,7 @@ const CineMavericksContainer = () => {
         })
         setHighestRatedMovies(sortedData.slice(0,5));
     };
+
     
     // const cineMaverickRoutes = createBrowserRouter([
     //     {
