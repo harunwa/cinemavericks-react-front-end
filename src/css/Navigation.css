@@ -1,9 +1,9 @@
-nav{
-    width: 60%;
+#nav__container{
+    
     display: flex;
-    padding: 10px;
-    border-radius: 10%;
-    justify-content: space-evenly;
-    ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
 
 }
