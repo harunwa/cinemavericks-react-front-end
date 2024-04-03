@@ -10,6 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating'; 
 import ReviewList from './ReviewList';
+import pic from "../assets/images/Whiplash.jpg";
 
 const Movie = ( {postReview} ) => {
   const movie = useLoaderData();
@@ -26,8 +27,6 @@ const Movie = ( {postReview} ) => {
         "userId": 1
     }
   );
-  const imageFileName = movie.title.split(" ").join("");
-  const pathToImage = `../assets/images/${imageFileName}.jpg`;
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -63,13 +62,16 @@ const Movie = ( {postReview} ) => {
     console.log(stateReview);
     postReview(stateReview);
     handleModalClose();
-  }
+  };
+
+  const imageFileName = movie.title.split(" ").join("");
+  const pathToImage = require(`../assets/images/${imageFileName}.jpg`);
 
   return (
     <div>
       {movie ? (
         <div>
-          <img src={pathToImage} alt="" />
+          <img className='picture' src={pathToImage} alt="picture" />
           <h2>{movie.title}</h2>
           <p>Duration: {movie.duration} minutes</p>
           <p>Director: {movie.director}</p>
