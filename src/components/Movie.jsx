@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -26,6 +26,13 @@ const Movie = ( {postReview} ) => {
         "userId": 1
     }
   )
+  const [image, setImage] = useState(null);
+
+//   useEffect(() => {
+//     import(`${pathToImage}`).then((module) => {
+//       setImage(module.default);
+//     });
+//   }, [pathToImage]);
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -63,11 +70,16 @@ const Movie = ( {postReview} ) => {
     handleModalClose();
   }
 
+  const imageFileName = movie.title.split(" ").join("");
+  const pathToImage = `../assets/images/${imageFileName}.jpg`;
+
+  console.log(pathToImage);
 
   return (
     <div>
       {movie ? (
         <div>
+          <img src={pathToImage} alt="" />
           <h2>{movie.title}</h2>
           <p>Duration: {movie.duration} minutes</p>
           <p>Director: {movie.director}</p>
