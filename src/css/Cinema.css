@@ -1,6 +1,6 @@
 #graphic{
     background-color: #754043;
-    border: 1px solid #ddd;
+    box-shadow:  0 50px 50px 0 #84acce;
     border-radius: 4px;
     padding: 5px;
     width: 475px;

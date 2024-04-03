@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import '../css/MovieThumbnail.css'  
 
 const MovieThumbnail = ({movie}) => {
     return (  
@@ -7,7 +8,8 @@ const MovieThumbnail = ({movie}) => {
                 <h4>
                     {movie.title}
                 </h4>
-                <button> <Link to={`/movies/${movie.id}`}>See Movie</Link></button>
+                <button> <Link to={`/movies/${movie.id}`}>To Movie...</Link></button>
+                <p id="popcorn">🍿</p>
             </div>
         </>
     );

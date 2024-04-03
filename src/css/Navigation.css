@@ -15,4 +15,6 @@ nav{
     border: 5px solid #3a2618;
     border-width: 5px;
     width: 30%;
+    float:right;
 }
+
