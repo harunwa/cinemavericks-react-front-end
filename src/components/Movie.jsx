@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -17,6 +17,13 @@ const Movie = () => {
   const [reviewText, setReviewText] = useState('');
   const [reviewTitle, setReviewTitle] = useState('');
   const [rating, setRating] = useState(0); 
+  const [image, setImage] = useState(null);
+
+//   useEffect(() => {
+//     import(`${pathToImage}`).then((module) => {
+//       setImage(module.default);
+//     });
+//   }, [pathToImage]);
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -40,6 +47,8 @@ const Movie = () => {
 
   const imageFileName = movie.title.split(" ").join("");
   const pathToImage = `../assets/images/${imageFileName}.jpg`;
+
+  console.log(pathToImage);
 
   return (
     <div>
