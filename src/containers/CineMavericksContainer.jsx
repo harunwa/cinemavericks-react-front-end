@@ -88,6 +88,12 @@ const CineMavericksContainer = () => {
                     />
                 },
                 {
+                    path: "/user/:userId/movies",
+                    element: <Movies 
+                        movies={movies}
+                    />
+                },
+                {
                     path: "/movies/:movieId",
                     loader: movieLoader,
                     element: <Movie 

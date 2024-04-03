@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import MovieList from "./MovieList";
+import { useParams } from "react-router-dom";
 
 const Movies = ({movies}) => {
+
+    const {userId} = useParams();
 
     const [genreFilter, setGenreFilter] = useState("");
     const [minDuration, setMinDuration] = useState(0);
@@ -72,7 +75,7 @@ const Movies = ({movies}) => {
         />
         <>
         <h2>Movies</h2>
-        <MovieList listOfMovies={filteredMovies} />
+        <MovieList listOfMovies={filteredMovies} userId={userId} />
         </>
     </>
 );
