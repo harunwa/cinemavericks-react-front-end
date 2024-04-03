@@ -4,10 +4,9 @@ const MovieThumbnail = ({movie}) => {
     return (  
         <>
             <div>
-                <h3>
+                <h4>
                     {movie.title}
-
-                </h3>
+                </h4>
                 <button> <Link to={`/movies/${movie.id}`}>See Movie</Link></button>
             </div>
         </>

@@ -7,3 +7,12 @@
 
 
 }
+
+nav{
+    background-color: #9A8873;
+    margin: 30px;
+    border-radius: 100%;
+    border: 5px solid #3a2618;
+    border-width: 5px;
+    width: 30%;
+}

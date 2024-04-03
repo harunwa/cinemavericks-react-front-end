@@ -22,11 +22,12 @@ ul{
     list-style-type: none;
 }
 
-li {
+h4 {
         font-family: "Roboto Slab", serif;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
+        font-size: large;
       }
 
 h3{
@@ -36,4 +37,5 @@ h3{
     font-style: normal;
     text-shadow: 4px 4px black;
     color: bisque;
+    font-size: x-large;
 }
