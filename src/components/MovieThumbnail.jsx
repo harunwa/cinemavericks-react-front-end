@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 
-const MovieThumbnail = ({movie}) => {
+const MovieThumbnail = ({movie, userId}) => {
+    
+    const linkComponent = () => {
+        if(userId === undefined){
+            return <Link to={`/movies/${movie.id}`}>See Movie</Link>;
+        }
+        return <Link to={`/user/${userId}/movies/${movie.id}`}>See Movie</Link>;
+    }
+
     return (  
         <>
             <div>
@@ -8,7 +16,7 @@ const MovieThumbnail = ({movie}) => {
                     {movie.title}
 
                 </h3>
-                <button> <Link to={`/movies/${movie.id}`}>See Movie</Link></button>
+                <button>{linkComponent()}</button>
             </div>
         </>
     );
