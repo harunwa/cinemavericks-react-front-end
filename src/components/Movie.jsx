@@ -2,24 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const Movie = () => {
-  const { id } = useParams();
-  const movie = useLoaderData();
 
-  useEffect(() => {
-    const fetchMovie = async () => {
-      try {
-        const response = await fetch(`http://localhost:8080/movies/${id}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch movie details');
-        }
-        const data = await response.json();
-      } catch (error) {
-        console.error('Error fetching movie details:', error);
-      }
-    };
-
-    fetchMovie();
-  }, [id]);
+const movie = useLoaderData();
 
   return (
     <div>
