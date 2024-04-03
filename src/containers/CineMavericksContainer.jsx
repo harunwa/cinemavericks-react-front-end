@@ -33,6 +33,15 @@ const CineMavericksContainer = () => {
         setHighestRatedMovies(sortedData.slice(0,5));
     };
 
+    const postReview = async (newReview) => {
+        const response = await fetch("http://localhost:8080/reviews", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(newReview)
+        });
+        fetchMovies();
+    }
+
     const movieLoader = ({params}) => {
         return movies.find(movie => {
             return movie.id === parseInt(params.id);
@@ -70,7 +79,9 @@ const CineMavericksContainer = () => {
                 {
                     path: "/movies/:id",
                     loader: movieLoader,
-                    element: <Movie />
+                    element: <Movie 
+                        postReview={postReview}
+                    />
                 }                
             ]
         }
