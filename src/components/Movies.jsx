@@ -19,6 +19,20 @@ const Movies = ({movies}) => {
     setMinRating(parseInt(event.target.value));
    };
 
+   const filteredMovies = movies.filter(movie => {
+    if (genreFilter && movie.genres.map(genre => genre.genreEnum).includes(genreFilter)){
+        return false;
+    }
+
+    if (minDuration && movie.duration < minDuration){
+        return false;
+    }
+
+    if (minRating && movie.averageRating < minRating){
+        return false;
+    }
+    return true;
+   });
    
 
 
