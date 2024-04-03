@@ -1,17 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
 import '../css/Navigation.css'
+import logo from "../assets/images/logo.png"
 
 const Navigation = () => {
     return (  
         <>
-            <div >
-                <nav>
-                    <ul id="nav__container">
-                        <li><Link to="/cinema">Home</Link></li>
-                        <li><Link to="/movies">Movies</Link></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav>
+                <div id="AppDiv">
+                    <img id="logo" src={logo} alt="Cinemavericks logo and tag line"/>
+                </div>
+                <ul id="nav__container">
+                    <li><Link to="/cinema">Home 🏠</Link></li>
+                    <li><Link to="/movies">Movies 🎥</Link></li>
+                </ul>
+            </nav>
             <Outlet />
         </>
     );

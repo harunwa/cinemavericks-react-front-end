@@ -1,14 +1,37 @@
 #nav__container{
-    
+    background-color: #9A8873;
+    margin: 30px;
+    border-radius: 100%;
+    border: 5px solid #3a2618;
+    border-width: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
-
 }
 
+#logo{
+    height: 30%;
+    width: 30%;
+    padding: 5%;
+  }
+
+
 nav{
-    background-color: #9A8873;
-    margin: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    height: 100px;
+    width: 50%
+}
+
+li {
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
 }

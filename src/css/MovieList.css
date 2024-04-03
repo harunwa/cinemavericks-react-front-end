@@ -22,13 +22,6 @@ ul{
     list-style-type: none;
 }
 
-li {
-        font-family: "Roboto Slab", serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-      }
-
 h3{
     text-align: center;
     font-family: "Luckiest Guy", cursive;
@@ -36,4 +29,5 @@ h3{
     font-style: normal;
     text-shadow: 4px 4px black;
     color: bisque;
+    font-size: x-large;
 }
