@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
 import '../css/MovieThumbnail.css'  
 
-const MovieThumbnail = ({movie}) => {
+const MovieThumbnail = ({movie, userId}) => {
+    
+    const linkComponent = () => {
+        if(userId === undefined){
+            return <Link to={`/movies/${movie.id}`}>To Movie...</Link>;
+        }
+        return <Link to={`/user/${userId}/movies/${movie.id}`}>To Movie...</Link>;
+    }
+
     return (  
         <>
             <div>
                 <h4>
                     {movie.title}
                 </h4>
-                <button> <Link to={`/movies/${movie.id}`}>To Movie...</Link></button>
+                <button>{linkComponent()}</button>
                 <p id="popcorn">🍿</p>
             </div>
         </>

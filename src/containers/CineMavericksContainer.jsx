@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, useParams } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Cinema from "../components/Cinema";
 import Movies from "../components/Movies";
 import Movie from "../components/Movie";
 import '../css/CineMavericksContainer.css'   
+import UserList from "../components/UserList";
 
 const CineMavericksContainer = () => {
     
     const [movies, setMovies] = useState([]);
     const [movieLists, setMovieLists] = useState([]);
     const [highestRatedMovies, setHighestRatedMovies] = useState([]);
+    const [users, setUsers] = useState([]);
     
     const fetchMovies = async () => {
         const response = await fetch("http://localhost:8080/movies");
@@ -33,6 +35,12 @@ const CineMavericksContainer = () => {
         setHighestRatedMovies(sortedData.slice(0,5));
     };
 
+    const fetchUsers = async () => {
+        const response = await fetch("http://localhost:8080/users");
+        const data = await response.json();
+        setUsers(data);
+    }
+
     const postReview = async (newReview) => {
         const response = await fetch("http://localhost:8080/reviews", {
             method: "POST",
@@ -44,16 +52,19 @@ const CineMavericksContainer = () => {
 
     const movieLoader = ({params}) => {
         return movies.find(movie => {
-            return movie.id === parseInt(params.id);
+            return movie.id === parseInt(params.movieId);
         });
     }
-
     
     const cineMaverickRoutes = createBrowserRouter([
         {
             path: "/",
             element: <Navigation />,
             children: [
+                {
+                    path: "/login",
+                    element: <UserList users={users} />
+                },
                 {
                     path: "/cinema",
                     element: <Cinema 
@@ -63,7 +74,7 @@ const CineMavericksContainer = () => {
                     />
                 },
                 {                  
-                    path: "/cinema/:userId", 
+                    path: "/user/:userId/cinema", 
                     element: <Cinema 
                         movies={movies}
                         highestRatedMovies={highestRatedMovies}
@@ -77,12 +88,19 @@ const CineMavericksContainer = () => {
                     />
                 },
                 {
-                    path: "/movies/:id",
+                    path: "/movies/:movieId",
                     loader: movieLoader,
                     element: <Movie 
                         postReview={postReview}
                     />
-                }                
+                },
+                {
+                    path: "/user/:userId/movies/:movieId",
+                    loader: movieLoader,
+                    element: <Movie 
+                        postReview={postReview}
+                    />
+                }               
             ]
         }
     ]);
@@ -92,6 +110,7 @@ const CineMavericksContainer = () => {
         fetchMovies();
         fetchMovieLists();
         fetchHighestRatedMovies();
+        fetchUsers();
     }, []);
 
     return (  
