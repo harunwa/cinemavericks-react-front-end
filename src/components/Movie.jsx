@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating'; 
+import ReviewList from './ReviewList';
 
 const Movie = () => {
   const movie = useLoaderData();
@@ -37,6 +38,7 @@ const Movie = () => {
     setRating(newRating);
   };
 
+
   return (
     <div>
       {movie ? (
@@ -44,8 +46,9 @@ const Movie = () => {
           <h2>{movie.title}</h2>
           <p>Duration: {movie.duration} minutes</p>
           <p>Director: {movie.director}</p>
-          <p>Genre: {movie.genre}</p>
+          <p>Genre: {movie.genres.map(genre => genre.genreEnum).join(', ')}</p>
           <p>Release Year: {movie.year}</p>
+          <ReviewList reviews={movie.reviews}/>
           <Button variant="outlined" onClick={handleModalOpen}>
             Add New Review
           </Button>
@@ -81,8 +84,9 @@ const Movie = () => {
             </DialogActions>
           </Dialog>
         </div>
+        
       ) : (
-        <p>Loading...</p>
+        <p></p>
       )}
     </div>
   );
