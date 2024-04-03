@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import ReviewList from './ReviewList';
 
 const Movie = () => {
 
@@ -15,6 +16,7 @@ const movie = useLoaderData();
           <p>Director: {movie.director}</p>
           <p>Genre: {movie.genres.map(genre => genre.genreEnum).join(', ')}</p>
           <p>Release Year: {movie.year}</p>
+          <ReviewList reviews={movie.reviews}/>
         </div>
         
       ) : (
