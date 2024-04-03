@@ -25,14 +25,9 @@ const Movie = ( {postReview} ) => {
         "movieId": movie.id,
         "userId": 1
     }
-  )
-  const [image, setImage] = useState(null);
-
-//   useEffect(() => {
-//     import(`${pathToImage}`).then((module) => {
-//       setImage(module.default);
-//     });
-//   }, [pathToImage]);
+  );
+  const imageFileName = movie.title.split(" ").join("");
+  const pathToImage = `../assets/images/${imageFileName}.jpg`;
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -69,11 +64,6 @@ const Movie = ( {postReview} ) => {
     postReview(stateReview);
     handleModalClose();
   }
-
-  const imageFileName = movie.title.split(" ").join("");
-  const pathToImage = `../assets/images/${imageFileName}.jpg`;
-
-  console.log(pathToImage);
 
   return (
     <div>
