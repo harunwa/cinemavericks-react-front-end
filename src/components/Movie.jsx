@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import ReviewList from './ReviewList';
 
 const Movie = () => {
   const { id } = useParams();
@@ -30,6 +31,7 @@ const Movie = () => {
           <p>Director: {movie.director}</p>
           <p>Genre: {movie.genre}</p>
           <p>Release Year: {movie.year}</p>
+          <ReviewList reviews={movie.reviews}/>
         </div>
       ) : (
         <p>Loading...</p>
