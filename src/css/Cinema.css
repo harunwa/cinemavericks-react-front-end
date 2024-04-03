@@ -1,0 +1,19 @@
+#graphic{
+    background-color: #754043;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 475px;
+    height: 400px;
+    text-align: center;
+    margin-left: 33%;
+   
+}
+#landing-pic {
+    border-radius: 4px;
+    padding: 18px;
+    width: 80%;
+    height: 90%;
+  }
+
+

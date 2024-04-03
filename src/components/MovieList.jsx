@@ -6,7 +6,6 @@ const MovieList = ({listOfMovies, title}) => {
 
     const MovieComponents = listOfMovies.map(movie => {
         return <>
-            <li>{movie.title}</li> 
             <MovieThumbnail movie={movie}/>
         </>
     });

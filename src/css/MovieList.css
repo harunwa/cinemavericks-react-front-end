@@ -8,10 +8,15 @@
     border-style: dotted;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 30px;
+    grid-auto-rows: auto;
     gap: 30px;
     padding: 30px
 }
+
+#MovieList div {
+    text-align: center;
+}
+
 
 ul{
     list-style-type: none;
