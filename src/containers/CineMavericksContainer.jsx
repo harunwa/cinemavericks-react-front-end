@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Cinema from "../components/Cinema";
 import Movies from "../components/Movies";
 import Movie from "../components/Movie";
+import '../css/CineMavericksContainer.css'   
 
 const CineMavericksContainer = () => {
     
@@ -84,7 +85,9 @@ const CineMavericksContainer = () => {
 
     return (  
         <>
-           <RouterProvider router={cineMaverickRoutes}/>
+            <section>
+                <RouterProvider router={cineMaverickRoutes}/>
+           </section>
         </>
     );
 }
