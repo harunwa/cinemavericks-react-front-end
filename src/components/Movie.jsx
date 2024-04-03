@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating'; 
 import ReviewList from './ReviewList';
-import pic from "../assets/images/Whiplash.jpg";
+import './Movie.css';
 
 const Movie = ( {postReview} ) => {
   const movie = useLoaderData();
