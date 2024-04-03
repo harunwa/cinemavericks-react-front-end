@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Movie = () => {
 
 const movie = useLoaderData();
+
 
   return (
     <div>
@@ -12,14 +13,16 @@ const movie = useLoaderData();
           <h2>{movie.title}</h2>
           <p>Duration: {movie.duration} minutes</p>
           <p>Director: {movie.director}</p>
-          <p>Genre: {movie.genre}</p>
+          <p>Genre: {movie.genres.map(genre => genre.genreEnum).join(', ')}</p>
           <p>Release Year: {movie.year}</p>
         </div>
+        
       ) : (
-        <p>Loading...</p>
+        <p></p>
       )}
     </div>
   );
 };
 
 export default Movie;
+
