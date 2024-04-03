@@ -20,7 +20,7 @@ const Movies = ({movies}) => {
    };
 
    const filteredMovies = movies.filter(movie => {
-    if (genreFilter && movie.genres.map(genre => genre.genreEnum).includes(genreFilter)){
+    if (genreFilter && !movie.genres.map(genre => genre.genreEnum).includes(genreFilter)){
         return false;
     }
 
