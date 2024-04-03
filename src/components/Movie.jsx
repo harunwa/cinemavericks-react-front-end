@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -38,11 +38,14 @@ const Movie = () => {
     setRating(newRating);
   };
 
+  const imageFileName = movie.title.split(" ").join("");
+  const pathToImage = `../assets/images/${imageFileName}.jpg`;
 
   return (
     <div>
       {movie ? (
         <div>
+          <img src={pathToImage} alt="" />
           <h2>{movie.title}</h2>
           <p>Duration: {movie.duration} minutes</p>
           <p>Director: {movie.director}</p>
