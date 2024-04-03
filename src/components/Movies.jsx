@@ -33,14 +33,43 @@ const Movies = ({movies}) => {
     }
     return true;
    });
-   
 
 
 
 
     return ( 
     <>
-     
+        <h2>Browse by</h2>
+        <label htmlFor="genre-filter">Genre: </label>
+        <select id="genre-filter" value={genreFilter} onChange={handleGenreChange}>
+            <option value="">All genres</option>
+            {movies
+                .map(movie => movie.genres.map(genre => genre.genreEnum))
+                .flat()
+                .filter((genre, index, self) => self.indexOf(genre) === index)
+                .map(genre => (
+                    <option key={genre} value={genre}>{genre}</option>
+                ))}
+        </select>
+
+        <label htmlFor="duration-filter">Minimum Duration:</label>
+        <input
+            type="number"
+            id="duration-filter"
+            value={minDuration}
+            onChange={handleDurationChange}
+            min={0}
+        />
+
+        <label htmlFor="rating-filter">Minimum Rating:</label>
+        <input
+            type="number"
+            id="rating-filter"
+            value={minRating}
+            onChange={handleRatingChange}
+            min="0"
+            max="5"
+        />
         <>
         <h2>Movies</h2>
         <MovieList listOfMovies={filteredMovies} />
