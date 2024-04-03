@@ -1,5 +1,7 @@
 import MovieList from "./MovieList";
 import { useParams } from "react-router-dom";
+import '../css/Cinema.css'
+import landing from "../assets/images/landing-page-graphic.jpg"
 
 const Cinema = ({movies, highestRatedMovies, movieLists}) => {
 
@@ -25,7 +27,9 @@ const Cinema = ({movies, highestRatedMovies, movieLists}) => {
 
     return ( 
         <>
-            <div> A FUN GRAPHIC INSERTED HERE</div>
+            <div id="graphic"> 
+                <img id="landing-pic" src={landing} alt="A picture of an axolotl at the cinema with friends"/>
+            </div>
             <main>
                 <MovieList 
                     listOfMovies={highestRatedMovies} title={"Highest Rated Movies:"}
