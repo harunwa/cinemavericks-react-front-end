@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating'; 
 import ReviewList from './ReviewList';
-import './Movie.css';
+import '../css/Movie.css';
 
 const Movie = ( {postReview} ) => {
 
@@ -71,7 +71,7 @@ const Movie = ( {postReview} ) => {
 
   const imageFileName = movie.title.split(" ").join("");
   const pathToImage = require(`../assets/images/${imageFileName}.jpg`);
-  <img className='picture' src={pathToImage} alt="picture" />
+  <img className='picture' src={pathToImage} alt="" />
 
   return (
     <div>
