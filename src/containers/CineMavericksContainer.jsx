@@ -5,12 +5,14 @@ import Cinema from "../components/Cinema";
 import Movies from "../components/Movies";
 import Movie from "../components/Movie";
 import '../css/CineMavericksContainer.css'   
+import UserList from "../components/UserList";
 
 const CineMavericksContainer = () => {
     
     const [movies, setMovies] = useState([]);
     const [movieLists, setMovieLists] = useState([]);
     const [highestRatedMovies, setHighestRatedMovies] = useState([]);
+    const [users, setUsers] = useState([]);
     
     const fetchMovies = async () => {
         const response = await fetch("http://localhost:8080/movies");
@@ -32,6 +34,12 @@ const CineMavericksContainer = () => {
         })
         setHighestRatedMovies(sortedData.slice(0,5));
     };
+
+    const fetchUsers = async () => {
+        const response = await fetch("http://localhost:8080/users");
+        const data = await response.json();
+        setUsers(data);
+    }
 
     const postReview = async (newReview) => {
         const response = await fetch("http://localhost:8080/reviews", {
@@ -55,6 +63,10 @@ const CineMavericksContainer = () => {
             element: <Navigation />,
             children: [
                 {
+                    path: "/login",
+                    element: <UserList users={users} />
+                },
+                {
                     path: "/cinema",
                     element: <Cinema 
                         movies={movies}
@@ -63,7 +75,7 @@ const CineMavericksContainer = () => {
                     />
                 },
                 {                  
-                    path: "/cinema/:userId", 
+                    path: "/user/:userId/cinema", 
                     element: <Cinema 
                         movies={movies}
                         highestRatedMovies={highestRatedMovies}
@@ -92,6 +104,7 @@ const CineMavericksContainer = () => {
         fetchMovies();
         fetchMovieLists();
         fetchHighestRatedMovies();
+        fetchUsers();
     }, []);
 
     return (  
