@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -12,6 +12,8 @@ import Rating from '@mui/material/Rating';
 import ReviewList from './ReviewList';
 
 const Movie = ( {postReview} ) => {
+
+  const {userId} = useParams();
   const movie = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
   const [reviewText, setReviewText] = useState("");
@@ -23,7 +25,7 @@ const Movie = ( {postReview} ) => {
         "content": "",
         "rating": "",
         "movieId": movie.id,
-        "userId": 1
+        "userId": userId
     }
   );
   const imageFileName = movie.title.split(" ").join("");
@@ -60,7 +62,10 @@ const Movie = ( {postReview} ) => {
 
   const handleModalSubmit = (event) => {
     event.preventDefault();
-    console.log(stateReview);
+    if(userId === undefined){
+      alert("Must be signed in!");
+      return;
+    }
     postReview(stateReview);
     handleModalClose();
   }
