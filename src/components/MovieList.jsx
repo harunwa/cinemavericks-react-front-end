@@ -6,7 +6,7 @@ const MovieList = ({listOfMovies, title, userId}) => {
 
     const MovieComponents = listOfMovies.map(movie => {
         return <>
-            <MovieThumbnail key={movie.id} movie={movie}/>
+            <MovieThumbnail key={movie.id} movie={movie} userId={userId}/>
         </>
     });
 

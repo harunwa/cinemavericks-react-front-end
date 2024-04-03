@@ -93,7 +93,14 @@ const CineMavericksContainer = () => {
                     element: <Movie 
                         postReview={postReview}
                     />
-                }                
+                },
+                {
+                    path: "/user/:userId/movies/:movieId",
+                    loader: movieLoader,
+                    element: <Movie 
+                        postReview={postReview}
+                    />
+                }               
             ]
         }
     ]);
