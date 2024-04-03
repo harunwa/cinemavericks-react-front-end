@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -11,12 +11,21 @@ import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating'; 
 import ReviewList from './ReviewList';
 
-const Movie = () => {
+const Movie = ( {postReview} ) => {
   const movie = useLoaderData();
   const [modalOpen, setModalOpen] = useState(false);
-  const [reviewText, setReviewText] = useState('');
-  const [reviewTitle, setReviewTitle] = useState('');
+  const [reviewText, setReviewText] = useState("");
+  const [reviewTitle, setReviewTitle] = useState("");
   const [rating, setRating] = useState(0); 
+  const [stateReview, setStateReview] = useState(
+    {
+        "title": "",
+        "content": "",
+        "rating": "",
+        "movieId": movie.id,
+        "userId": 1
+    }
+  )
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -28,15 +37,31 @@ const Movie = () => {
 
   const handleReviewChange = (event) => {
     setReviewText(event.target.value);
+    const copiedStateReview = {...stateReview};
+    copiedStateReview.content = event.target.value;
+    setStateReview(copiedStateReview);
   };
 
   const handleReviewTitleChange = (event) => {
     setReviewTitle(event.target.value);
+    const copiedStateReview = {...stateReview};
+    copiedStateReview.title = event.target.value;
+    setStateReview(copiedStateReview);
   };
 
   const handleRatingChange = (event, newRating) => {
     setRating(newRating);
+    const copiedStateReview = {...stateReview};
+    copiedStateReview.rating = newRating;
+    setStateReview(copiedStateReview);
   };
+
+  const handleModalSubmit = (event) => {
+    event.preventDefault();
+    console.log(stateReview);
+    postReview(stateReview);
+    handleModalClose();
+  }
 
 
   return (
@@ -80,7 +105,7 @@ const Movie = () => {
             </DialogContent>
             <DialogActions>
               <Button onClick={handleModalClose}>Cancel</Button>
-              <Button onClick={handleModalClose}>Submit Review</Button>
+              <Button onClick={handleModalSubmit}>Submit Review</Button>
             </DialogActions>
           </Dialog>
         </div>
