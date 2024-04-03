@@ -20,7 +20,11 @@ const Cinema = ({movies, highestRatedMovies, movieLists}) => {
 
     const reviewMoviesComponent = () => {
         if(userId !== undefined){
-            return <MovieList listOfMovies={userReviewedMovies} title={"Movies I have Reviewed:"} />;
+            return <MovieList 
+                        listOfMovies={userReviewedMovies} 
+                        title={"Movies I have Reviewed:"} 
+                        userId={userId}
+                   />;
         }
         return <></>;
     }
@@ -32,7 +36,9 @@ const Cinema = ({movies, highestRatedMovies, movieLists}) => {
             </div>
             <main>
                 <MovieList 
-                    listOfMovies={highestRatedMovies} title={"Highest Rated Movies:"}
+                    listOfMovies={highestRatedMovies} 
+                    title={"Highest Rated Movies:"}
+                    userId={userId}
                 />
                 {reviewMoviesComponent()}
             </main>
