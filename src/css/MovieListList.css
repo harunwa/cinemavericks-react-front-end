@@ -1,16 +1,18 @@
-#graphic2{
+#graphic2 {
     background-color: #754043;
-    box-shadow:  0 50px 50px 0 #84ACCE;
+    box-shadow: 0 50px 50px 0 #84ACCE;
     border-radius: 4px;
     padding: 5px;
     width: 475px;
     height: 400px;
     text-align: center;
-    margin-left: 33%;
+    margin: 0 auto;
 }
+
 #landing-pic {
     border-radius: 4px;
     padding: 18px;
     width: 80%;
     height: 90%;
-  }
+    margin: 0 auto;
+}
