@@ -118,7 +118,7 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 - Harun Walizadeh - GitHub: https://github.com/harunwa
 - Laura Harper      - Github: https://github.com/h-larper
 - Tadiwa - Github: https://github.com/TDD66
-- Vivian - Github:
+- Vivian - Github: https://github.com/viviann-1
 - Jean Marwizi 	- Github: https://github.com/Jean-005
 
 ### Special thanks to:
