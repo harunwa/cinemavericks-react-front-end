@@ -7,7 +7,6 @@ const Navigation = () => {
 
     const location = useLocation();
     const splitLocation = location.pathname.split("/");
-    console.log(splitLocation);
 
     const homePath = () => {
         if(splitLocation.length === 2){

@@ -69,7 +69,7 @@ const Movie = ( {postReview} ) => {
     handleModalClose();
   };
 
-  const imageFileName = movie.title.split(" ").join("");
+  const imageFileName = movie.title.split(" ").join("").replace(":", "-");
   const pathToImage = require(`../assets/images/${imageFileName}.jpg`);
   <img className='picture' src={pathToImage} alt="" />
 
