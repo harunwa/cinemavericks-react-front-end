@@ -85,3 +85,8 @@ h2{
     justify-content: center;
     padding:2% 
 }
+
+#reviewFormHeader{
+    text-shadow: none;
+    color: #84acce;
+}

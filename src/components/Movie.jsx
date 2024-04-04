@@ -98,7 +98,7 @@ const Movie = ( {postReview} ) => {
               </Button>
           </div>
           <Dialog open={modalOpen} onClose={handleModalClose} maxWidth="md">
-            <DialogTitle>Add New Review</DialogTitle>
+          <DialogTitle id="reviewFormHeader"><b><u>Add New Review</u></b></DialogTitle>
             <IconButton aria-label="close" onClick={handleModalClose}>
               <CloseIcon />
             </IconButton>
