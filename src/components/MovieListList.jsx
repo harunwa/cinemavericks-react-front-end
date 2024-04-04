@@ -23,8 +23,10 @@ const MovieListList = ( { movieLists } ) => {
 
     return (  
         <>
+        <div id="graphic__container">
         <div id="graphic2">
             <img id="landing-pic" src={landing} alt="An axolotl at the cinema with friends"/>
+        </div>
         </div>
             <ul>
                 {loadComponents()}
