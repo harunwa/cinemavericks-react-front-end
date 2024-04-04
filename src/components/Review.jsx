@@ -1,3 +1,5 @@
+import '../css/Review.css'
+
 const Review = ( { review, userId, deleteReview } ) => {
 
     const starRating = (rating) => {
@@ -26,11 +28,12 @@ const Review = ( { review, userId, deleteReview } ) => {
                 <p>Rating: <strong>{starRating(review.rating)}</strong></p>
                 <p>{date}</p>
             </div>
+            <div id="delete_button">
             {
                 parseInt(userId) === review.user.id ? 
                 <button onClick={handleClick}>Delete Your Review</button> :
                 <></>
-            }
+            } </div>
         </>
     );
 }
