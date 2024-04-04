@@ -92,9 +92,11 @@ const Movie = ( {postReview} ) => {
           <ReviewList reviews={movie.reviews}/>
           </div>
           <hr></hr>
-          <Button variant="outlined" onClick={handleModalOpen}>
-            Add New Review
-          </Button>
+          <div id="reviewButton">
+              <Button id="addReviewButton" variant="outlined" onClick={handleModalOpen}>
+              Add New Review
+              </Button>
+          </div>
           <Dialog open={modalOpen} onClose={handleModalClose} maxWidth="md">
             <DialogTitle>Add New Review</DialogTitle>
             <IconButton aria-label="close" onClick={handleModalClose}>
