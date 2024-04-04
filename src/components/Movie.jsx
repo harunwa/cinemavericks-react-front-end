@@ -89,7 +89,7 @@ const Movie = ( {postReview} ) => {
           </div>
           < hr></hr>
           <div id="ReviewList">
-          <ReviewList reviews={movie.reviews}/>
+          <ReviewList reviews={movie.reviews} userId={userId}/>
           </div>
           <hr></hr>
           <div id="reviewButton">
