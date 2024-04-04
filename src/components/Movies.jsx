@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MovieList from "./MovieList";
 import { useParams } from "react-router-dom";
+import '../css/Movies.css'
 
 const Movies = ({movies}) => {
 
