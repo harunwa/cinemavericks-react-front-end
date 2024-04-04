@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating'; 
 
-const Review = ( { review, userId, deleteReview } ) => {
+const Review = ( { review, userId, deleteReview, editReview } ) => {
 
     const starRating = (rating) => {
         let stars = '';
