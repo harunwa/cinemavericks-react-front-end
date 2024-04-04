@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import '../css/Navigation.css'
 import logo from "../assets/images/logo.png"
+import { useState } from "react";
 
 const Navigation = () => {
 
@@ -12,18 +13,14 @@ const Navigation = () => {
         if(splitLocation.length === 2){
             return "/cinema";
         }
+        return `/user/${splitLocation[2]}/cinema`;
     };
 
     const moviesPath = () => {
         if(splitLocation.length === 2){
             return "/movies";
         }
-    };
-
-    const loginPath = () => {
-        if(splitLocation.length === 2){
-            return "/login";
-        }
+        return `/user/${splitLocation[2]}/movies`;
     };
 
     return (  
@@ -35,7 +32,7 @@ const Navigation = () => {
                 <ul id="nav__container">
                     <li><Link to={homePath()}>Home 🏠</Link></li>
                     <li><Link to={moviesPath()}>Movies 🎥</Link></li>
-                    <li><Link to={loginPath()}>Login 👤</Link></li>
+                    <li><Link to="/login">Login 👤</Link></li>
                 </ul>
             </nav>
             <Outlet />
