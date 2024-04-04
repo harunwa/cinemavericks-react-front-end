@@ -22,7 +22,7 @@ const MovieListList = ( { movieLists } ) => {
 
     return (  
         <>
-            <h2>{userId === undefined || location.pathname.includes("public") ?
+        <h2>{userId === undefined || location.pathname.includes("public") ?
              "All Movie Lists" :
               "My Movie Lists"}
             </h2>
