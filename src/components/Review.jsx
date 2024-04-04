@@ -36,11 +36,12 @@ const Review = ( { review, userId, deleteReview, editReview } ) => {
                 <p>Rating: <strong>{starRating(review.rating)}</strong></p>
                 <p>{date}</p>
             </div>
+            <div id="delete_button">
             {
                 parseInt(userId) === review.user.id ? 
                 <button onClick={handleClick}>Delete Your Review</button> :
                 <></>
-            }
+            } </div>
         </>
     );
 }
