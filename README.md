@@ -115,7 +115,7 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 ## Credits and Acknowledgements
 
 ### The Cinemarvs Collaborators:
-- Harun - GitHub: 
+- Harun Walizadeh - GitHub: https://github.com/harunwa
 - Laura Harper      - Github: https://github.com/h-larper
 - Tadiwa - Github:
 - Vivian - Github:
