@@ -109,7 +109,7 @@ const CineMavericksContainer = () => {
                     />
                 },
                 {
-                    path: "/movielists",
+                    path: "/public/movielists",
                     element: <MovieListList 
                         movieLists={movieLists}
                     />
