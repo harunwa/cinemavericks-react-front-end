@@ -59,6 +59,15 @@ const CineMavericksContainer = () => {
         fetchMovies();
     }
 
+    const editReview = async (amendedReview, reviewId) => {
+        const response = await fetch(`http://localhost:8080/reviews/${reviewId}`, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(amendedReview)
+        });
+        fetchMovies();
+    }
+
     const movieLoader = ({params}) => {
         return movies.find(movie => {
             return movie.id === parseInt(params.movieId);
@@ -112,6 +121,7 @@ const CineMavericksContainer = () => {
                     element: <Movie 
                         postReview={postReview}
                         deleteReview={deleteReview}
+                        editReview={editReview}
                     />
                 },
                 {
@@ -120,6 +130,7 @@ const CineMavericksContainer = () => {
                     element: <Movie 
                         postReview={postReview}
                         deleteReview={deleteReview}
+                        editReview={editReview}
                     />
                 },
                 {
