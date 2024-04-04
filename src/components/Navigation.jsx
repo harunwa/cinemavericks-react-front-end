@@ -22,10 +22,10 @@ const Navigation = () => {
     };
 
     const movieListPath = () => {
-        if(splitLocation.length === 3){
-            return "/public/movielists";
+        if(splitLocation.length === 2){
+            return "/public_movielists";
         }
-        return `/user/${splitLocation[1]}/movielists`;
+        return `/user/${splitLocation[2]}/movielists`
     };
 
     return (  
