@@ -15,8 +15,18 @@
 }
 
 .picture {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+    border-radius: 15%;
+    border: 5px solid #754043 ;
+    box-shadow:  0 30px 30px 0 #84acce;
+   
+    
+}
+
+#picture__container{
+    display: flex;
+    justify-content: center;
 }
 
 #ReviewList {

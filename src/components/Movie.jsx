@@ -77,8 +77,10 @@ const Movie = ( {postReview} ) => {
     <div>
       {movie ? (
         <div>
-          <img className="picture" src={pathToImage} alt="" />
           <h2>{movie.title}</h2>
+          <div id="picture__container">
+            <img className="picture" src={pathToImage} alt="" />
+          </div>
           <div id="movieProperties">
             <p><i><u>Duration:</u></i><p>{movie.duration} minutes</p></p>
             <p><i><u>Director: </u></i><p>{movie.director}</p></p>
