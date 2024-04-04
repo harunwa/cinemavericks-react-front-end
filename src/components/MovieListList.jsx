@@ -1,12 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import MovieList from "./MovieList";
 
 const MovieListList = ( { movieLists } ) => {
 
     const {userId} = useParams();
+    const location = useLocation();
 
     const loadComponents = () => {
-        if(userId === undefined){
+        if(userId === undefined || location.pathname.includes("public")){
             return movieLists.map(movieList => {
                 return <li key={movieList.id}><MovieList listOfMovies={movieList.movies} title={movieList.title} userId={userId}/></li>;
             });

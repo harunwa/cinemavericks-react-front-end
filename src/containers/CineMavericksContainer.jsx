@@ -119,7 +119,13 @@ const CineMavericksContainer = () => {
                     element: <MovieListList 
                         movieLists={movieLists}
                     />
-                },               
+                },
+                {
+                    path: "/user/:userId/public_movielists",
+                    element: <MovieListList 
+                    movieLists={movieLists}
+                />
+                }             
             ]
         }
     ]);
