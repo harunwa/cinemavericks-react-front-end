@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -69,9 +69,9 @@ const Movie = ( {postReview} ) => {
     handleModalClose();
   };
 
-  const imageFileName = movie.title.split(" ").join("");
+  const imageFileName = movie.title.split(" ").join("").replace(":", "-");
   const pathToImage = require(`../assets/images/${imageFileName}.jpg`);
-  <img className='picture' src={pathToImage} alt="picture" />
+  <img className='picture' src={pathToImage} alt="" />
 
   return (
     <div>

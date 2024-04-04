@@ -1,6 +1,5 @@
 import CineMavericksContainer from './containers/CineMavericksContainer';
 import './App.css';
-import logo from "./assets/images/logo.png"
 
 function App() {
   return (
