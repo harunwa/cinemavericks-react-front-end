@@ -1,4 +1,5 @@
 import User from "./User";
+import '../css/User.css' 
 
 const UserList = ( { users } ) => {
 
@@ -7,7 +8,7 @@ const UserList = ( { users } ) => {
     });
 
     return (  
-        <ul>
+        <ul className="user-list">
             {userListComponents}
         </ul>
     );

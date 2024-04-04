@@ -1,0 +1,54 @@
+.user-list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    color: #754043;
+    font-size: 16px;
+}
+
+.sign-in-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #754043;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sign-in-button:hover {
+    background-color: #3a2618;
+}
+
+.sign-in-button::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #754043;
+    transition: border-color 0.3s;
+}
+
+.sign-in-button:hover::before {
+    border-bottom-color: #3a2618;
+}
+
+.user-name {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
