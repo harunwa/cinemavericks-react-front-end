@@ -80,12 +80,16 @@ const Movie = ( {postReview} ) => {
           <img className="picture" src={pathToImage} alt="" />
           <h2>{movie.title}</h2>
           <div id="movieProperties">
-            <p>Duration: {movie.duration} minutes</p>
-            <p>Director: {movie.director}</p>
-            <p>Genre: {movie.genres.map(genre => genre.genreEnum).join(', ')}</p>
-            <p>Release Year: {movie.year}</p>
+            <p><i><u>Duration:</u></i><p>{movie.duration} minutes</p></p>
+            <p><i><u>Director: </u></i><p>{movie.director}</p></p>
+            <p><i><u>Genre:</u></i><p>{movie.genres.map(genre => genre.genreEnum).join(', ')}</p></p>
+            <p><i><u>Release Year: </u></i><p>{movie.year}</p></p>
           </div>
+          < hr></hr>
+          <div id="ReviewList">
           <ReviewList reviews={movie.reviews}/>
+          </div>
+          <hr></hr>
           <Button variant="outlined" onClick={handleModalOpen}>
             Add New Review
           </Button>

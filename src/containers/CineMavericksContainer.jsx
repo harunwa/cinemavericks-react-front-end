@@ -3,8 +3,7 @@ import { RouterProvider, createBrowserRouter, useParams } from "react-router-dom
 import Navigation from "../components/Navigation";
 import Cinema from "../components/Cinema";
 import Movies from "../components/Movies";
-import Movie from "../components/Movie";
-import '../css/CineMavericksContainer.css'   
+import Movie from "../components/Movie"; 
 import UserList from "../components/UserList";
 
 const CineMavericksContainer = () => {
