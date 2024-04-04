@@ -3,6 +3,20 @@
     color: #c9463a;
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
-    font-size: x-large;
-    width: 170px;
+    font-size: medium;
+    width: 100px;
+}
+
+#edit_button button {
+    background-color: white;
+    color: #0d3895;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: medium;
+    width: 100px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
 }

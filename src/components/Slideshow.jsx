@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Shawshank from '../assets/images/Shawshank-banner.jpg';
-import Matrix from '../assets/images/Matrix_banner.jpg';
-import Titanic from '../assets/images/Titanic.jpg';
-import Batman from '../assets/images/Batman.jpg';
+import Shawshank from '../assets/images/Shawshank-banner2.jpg';
+import Matrix from '../assets/images/Matrix_banner2.jpg';
+import Titanic from '../assets/images/Titanic2.jpg';
+import Batman from '../assets/images/Batman2.jpg';
 
 const Slideshow = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
