@@ -1,4 +1,4 @@
-const Review = ( { review, userId } ) => {
+const Review = ( { review, userId, deleteReview } ) => {
 
     const starRating = (rating) => {
         let stars = '';
@@ -12,7 +12,7 @@ const Review = ( { review, userId } ) => {
     };
     
     const handleClick = () => {
-        
+        deleteReview(review.id);
     }
 
     const date = review.date.split(' ')[0];
@@ -26,9 +26,10 @@ const Review = ( { review, userId } ) => {
                 <p>Rating: <strong>{starRating(review.rating)}</strong></p>
                 <p>{date}</p>
             </div>
-            {parseInt(userId) === review.user.id ? 
-            <button onClick={handleClick}>Delete Your Review</button> :
-            <></>
+            {
+                parseInt(userId) === review.user.id ? 
+                <button onClick={handleClick}>Delete Your Review</button> :
+                <></>
             }
         </>
     );

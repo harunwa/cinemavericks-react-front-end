@@ -50,6 +50,15 @@ const CineMavericksContainer = () => {
         fetchMovies();
     }
 
+    const deleteReview = async (reviewId) => {
+        const response = await fetch(`http://localhost:8080/reviews/${reviewId}`, {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(reviewId)
+        });
+        fetchMovies();
+    }
+
     const movieLoader = ({params}) => {
         return movies.find(movie => {
             return movie.id === parseInt(params.movieId);
@@ -102,6 +111,7 @@ const CineMavericksContainer = () => {
                     loader: movieLoader,
                     element: <Movie 
                         postReview={postReview}
+                        deleteReview={deleteReview}
                     />
                 },
                 {
@@ -109,6 +119,7 @@ const CineMavericksContainer = () => {
                     loader: movieLoader,
                     element: <Movie 
                         postReview={postReview}
+                        deleteReview={deleteReview}
                     />
                 },
                 {
