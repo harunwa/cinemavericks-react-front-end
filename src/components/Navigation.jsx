@@ -1,7 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import '../css/Navigation.css'
 import logo from "../assets/images/logo.png"
-import { useState } from "react";
 
 const Navigation = () => {
 
