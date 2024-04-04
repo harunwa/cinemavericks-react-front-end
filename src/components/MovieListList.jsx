@@ -12,7 +12,7 @@ const MovieListList = ( { movieLists } ) => {
             });
         }
 
-        const filteredMovieLists = movieLists.filter(movieList => userId === movieList.user.id);
+        const filteredMovieLists = movieLists.filter(movieList => parseInt(userId) === movieList.user.id);
         return filteredMovieLists.map(movieList => {
             return <li key={movieList.id}><MovieList listOfMovies={movieList.movies} title={movieList.title} userId={userId}/></li>;
         });
