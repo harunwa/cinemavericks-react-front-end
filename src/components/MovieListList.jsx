@@ -9,7 +9,7 @@ const MovieListList = ( { movieLists } ) => {
     const loadComponents = () => {
         if(userId === undefined || location.pathname.includes("public")){
             return movieLists.map(movieList => {
-                return <li key={movieList.id}><MovieList listOfMovies={movieList.movies} title={movieList.title} userId={userId}/></li>;
+                return <li key={movieList.id}><MovieList listOfMovies={movieList.movies} title={`${movieList.title} by ${movieList.user.name}`} userId={userId}/></li>;
             });
         }
 
