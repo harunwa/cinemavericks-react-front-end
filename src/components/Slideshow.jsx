@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Shawshank from '../assets/images/Shawshank-banner.jpg';
+import Matrix from '../assets/images/Matrix_banner.jpg';
 import Titanic from '../assets/images/Titanic.jpg';
 import Batman from '../assets/images/Batman.jpg';
 
 const Slideshow = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const slides = [Shawshank, Titanic, Batman];
+    const slides = [Shawshank, Matrix, Titanic, Batman];
     const totalSlides = slides.length;
 
     useEffect(() => {
