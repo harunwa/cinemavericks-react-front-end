@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { RouterProvider, createBrowserRouter, useParams } from "react-router-dom";
+import { RouterProvider, createBrowserRouter} from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Cinema from "../components/Cinema";
 import Movies from "../components/Movies";
-import Movie from "../components/Movie";
-import '../css/CineMavericksContainer.css'   
+import Movie from "../components/Movie"; 
 import UserList from "../components/UserList";
+import MovieListList from "../components/MovieListList";
 
 const CineMavericksContainer = () => {
     
@@ -54,7 +54,7 @@ const CineMavericksContainer = () => {
         return movies.find(movie => {
             return movie.id === parseInt(params.movieId);
         });
-    }
+    };
     
     const cineMaverickRoutes = createBrowserRouter([
         {
@@ -106,7 +106,25 @@ const CineMavericksContainer = () => {
                     element: <Movie 
                         postReview={postReview}
                     />
-                }               
+                },
+                {
+                    path: "/public_movielists",
+                    element: <MovieListList 
+                        movieLists={movieLists}
+                    />
+                },
+                {
+                    path: "/user/:userId/movielists",
+                    element: <MovieListList 
+                        movieLists={movieLists}
+                    />
+                },
+                {
+                    path: "/user/:userId/public_movielists",
+                    element: <MovieListList 
+                    movieLists={movieLists}
+                />
+                }             
             ]
         }
     ]);
@@ -122,7 +140,9 @@ const CineMavericksContainer = () => {
     return (  
         <>
             <section>
-                <RouterProvider router={cineMaverickRoutes}/>
+                <RouterProvider 
+                router={cineMaverickRoutes}
+                />
            </section>
         </>
     );

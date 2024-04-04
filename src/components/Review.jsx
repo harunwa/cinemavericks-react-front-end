@@ -15,11 +15,13 @@ const Review = ( { review } ) => {
 
     return (  
         <>
-            <h3>{review.title}</h3>
-            <p>Review by <strong>{review.user.name}</strong></p>
-            <p>{review.content}</p>
-            <p>Rating: <strong>{starRating(review.rating)}</strong></p>
-            <p>{date}</p>
+            <h3 id="ReviewTitle">{review.title}</h3>
+            <div id="ReviewProperties">
+                <p>Review by <strong>{review.user.name}</strong></p>
+                <p>{review.content}</p>
+                <p>Rating: <strong>{starRating(review.rating)}</strong></p>
+                <p>{date}</p>
+            </div>
         </>
     );
 }

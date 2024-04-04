@@ -11,7 +11,7 @@ const Cinema = ({ movies, highestRatedMovies, movieLists }) => {
         let matchedMovie = null;
         const reviews = movie.reviews;
         reviews.forEach(review => {
-            if (userId == review.user.id) {
+            if (parseInt(userId) === review.user.id) {
                 matchedMovie = movie;
             }
         });
@@ -33,10 +33,12 @@ const Cinema = ({ movies, highestRatedMovies, movieLists }) => {
 
     return (
         <>
+
         
             <div id="graphic">
                 <Slideshow />
-            </div>
+            
+          </div>
             <main>
                 <MovieList
                     listOfMovies={highestRatedMovies}
