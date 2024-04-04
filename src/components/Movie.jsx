@@ -77,18 +77,28 @@ const Movie = ( {postReview} ) => {
     <div>
       {movie ? (
         <div>
-          <img className="picture" src={pathToImage} alt="" />
           <h2>{movie.title}</h2>
-          <p>Duration: {movie.duration} minutes</p>
-          <p>Director: {movie.director}</p>
-          <p>Genre: {movie.genres.map(genre => genre.genreEnum).join(', ')}</p>
-          <p>Release Year: {movie.year}</p>
+          <div id="picture__container">
+            <img className="picture" src={pathToImage} alt="" />
+          </div>
+          <div id="movieProperties">
+            <p><i><u>Duration:</u></i><p>{movie.duration} minutes</p></p>
+            <p><i><u>Director: </u></i><p>{movie.director}</p></p>
+            <p><i><u>Genre:</u></i><p>{movie.genres.map(genre => genre.genreEnum).join(', ')}</p></p>
+            <p><i><u>Release Year: </u></i><p>{movie.year}</p></p>
+          </div>
+          < hr></hr>
+          <div id="ReviewList">
           <ReviewList reviews={movie.reviews}/>
-          <Button variant="outlined" onClick={handleModalOpen}>
-            Add New Review
-          </Button>
+          </div>
+          <hr></hr>
+          <div id="reviewButton">
+              <Button id="addReviewButton" variant="outlined" onClick={handleModalOpen}>
+              Add New Review
+              </Button>
+          </div>
           <Dialog open={modalOpen} onClose={handleModalClose} maxWidth="md">
-            <DialogTitle>Add New Review</DialogTitle>
+          <DialogTitle id="reviewFormHeader"><b><u>Add New Review</u></b></DialogTitle>
             <IconButton aria-label="close" onClick={handleModalClose}>
               <CloseIcon />
             </IconButton>

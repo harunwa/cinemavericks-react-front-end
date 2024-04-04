@@ -1,4 +1,92 @@
+#movieProperties{
+    background-color: #9a8873;
+    border: 5px solid #3a2618;
+    border-style: dotted;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: large;
+    color: black;
+    text-align: center;
+    margin: 50px 300px 50px 300px;
+
+
+}
+
 .picture {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+    border-radius: 15%;
+    border: 5px solid #754043 ;
+    box-shadow:  0 30px 30px 0 #84acce;
+   
+    
+}
+
+#picture__container{
+    display: flex;
+    justify-content: center;
+}
+
+#ReviewList {
+    background-color: #9a8873;
+    border: 5px solid #3a2618;
+    border-style: dotted;
+    margin: 50px 400px 50px 400px;
+}
+
+hr{
+    border-color:#37423d ;
+
+}
+
+h2{
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 4px 4px black;
+    color: bisque;
+    font-size: xx-large;
+}
+
+#ReviewTitle{
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 10px 10px #84acce;
+}
+
+#ReviewProperties{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: large;
+    color: black;
+    text-align: center;
+}
+
+#ListItem{
+    text-shadow: none;
+}
+
+#addReviewButton{
+    background-color:#754043;
+    color: #9a8873;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: medium;
+}
+
+#reviewButton{
+    display: flex;
+    justify-content: center;
+    padding:2% 
+}
+
+#reviewFormHeader{
+    text-shadow: none;
+    color: #84acce;
 }
