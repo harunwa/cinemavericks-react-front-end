@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 import Rating from '@mui/material/Rating'; 
 import ReviewList from './ReviewList';
-import './Movie.css';
+import '../css/Movie.css';
 
 const Movie = ( {postReview} ) => {
 
@@ -79,10 +79,12 @@ const Movie = ( {postReview} ) => {
         <div>
           <img className="picture" src={pathToImage} alt="" />
           <h2>{movie.title}</h2>
-          <p>Duration: {movie.duration} minutes</p>
-          <p>Director: {movie.director}</p>
-          <p>Genre: {movie.genres.map(genre => genre.genreEnum).join(', ')}</p>
-          <p>Release Year: {movie.year}</p>
+          <div id="movieProperties">
+            <p>Duration: {movie.duration} minutes</p>
+            <p>Director: {movie.director}</p>
+            <p>Genre: {movie.genres.map(genre => genre.genreEnum).join(', ')}</p>
+            <p>Release Year: {movie.year}</p>
+          </div>
           <ReviewList reviews={movie.reviews}/>
           <Button variant="outlined" onClick={handleModalOpen}>
             Add New Review
