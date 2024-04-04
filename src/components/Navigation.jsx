@@ -32,7 +32,9 @@ const Navigation = () => {
         <>
             <nav>
                 <div id="AppDiv">
-                    <img id="logo" src={logo} alt="Cinemavericks logo and tag line"/>
+                    <Link to={homePath()}>
+                        <img id="logo" src={logo} alt="Cinemavericks logo and tag line"/>
+                     </Link>
                 </div>
                 <ul id="nav__container">
                     <li><Link to={homePath()}>Home 🏠</Link></li>
