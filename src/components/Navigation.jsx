@@ -40,6 +40,7 @@ const Navigation = () => {
                     <li><Link to={homePath()}>Home 🏠</Link></li>
                     <li><Link to={moviesPath()}>Movies 🎥</Link></li>
                     <li><Link to={movieListPath()}>My Movie Lists 📋</Link></li>
+                    <li><Link to="/public_movielists">All Movie Lists 🌍</Link></li>
                     <li><Link to="/login">Login 👤</Link></li>
                 </ul>
             </nav>
