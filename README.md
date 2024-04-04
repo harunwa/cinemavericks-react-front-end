@@ -15,11 +15,10 @@ This front-end project utilises JavaScript and the React library to create a dyn
 
 
 **The names and versions of libraries used:**
-- 
-- 
+- React.js
 - React Router DOM
-- 
-- 
+- Bootstrap
+- Material-UI
 
 
 
