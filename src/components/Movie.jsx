@@ -12,7 +12,7 @@ import Rating from '@mui/material/Rating';
 import ReviewList from './ReviewList';
 import '../css/Movie.css';
 
-const Movie = ( {postReview} ) => {
+const Movie = ( {postReview, deleteReview} ) => {
 
   const {userId} = useParams();
   const movie = useLoaderData();
@@ -89,7 +89,7 @@ const Movie = ( {postReview} ) => {
           </div>
           < hr></hr>
           <div id="ReviewList">
-          <ReviewList reviews={movie.reviews}/>
+          <ReviewList reviews={movie.reviews} userId={userId} deleteReview={deleteReview}/>
           </div>
           <hr></hr>
           <div id="reviewButton">
