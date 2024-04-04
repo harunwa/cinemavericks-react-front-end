@@ -21,6 +21,13 @@ const Navigation = () => {
         return `/user/${splitLocation[2]}/movies`;
     };
 
+    const movieListPath = () => {
+        if(splitLocation.length === 2){
+            return "/movielists";
+        }
+        return `/user/${splitLocation[2]}/movielists`;
+    };
+
     return (  
         <>
             <nav>
@@ -30,6 +37,7 @@ const Navigation = () => {
                 <ul id="nav__container">
                     <li><Link to={homePath()}>Home 🏠</Link></li>
                     <li><Link to={moviesPath()}>Movies 🎥</Link></li>
+                    <li><Link to={movieListPath()}>Movie Lists 📋</Link></li>
                     <li><Link to="/login">Login 👤</Link></li>
                 </ul>
             </nav>

@@ -6,6 +6,7 @@ import Movies from "../components/Movies";
 import Movie from "../components/Movie";
 import '../css/CineMavericksContainer.css'   
 import UserList from "../components/UserList";
+import MovieListList from "../components/MovieListList";
 
 const CineMavericksContainer = () => {
     
@@ -106,7 +107,19 @@ const CineMavericksContainer = () => {
                     element: <Movie 
                         postReview={postReview}
                     />
-                }               
+                },
+                {
+                    path: "/movielists",
+                    element: <MovieListList 
+                        movieLists={movieLists}
+                    />
+                },
+                {
+                    path: "/user/:userId/movielists",
+                    element: <MovieListList 
+                        movieLists={movieLists}
+                    />
+                },               
             ]
         }
     ]);
