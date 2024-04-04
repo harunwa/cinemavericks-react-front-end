@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { RouterProvider, createBrowserRouter} from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter, useNavigate} from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Cinema from "../components/Cinema";
 import Movies from "../components/Movies";
@@ -62,8 +62,8 @@ const CineMavericksContainer = () => {
             element: <Navigation />,
             children: [
                 {
-                    path: "/login",
-                    element: <UserList users={users} />
+                    path: "/",
+                    element: <Navigate to="/cinema" />
                 },
                 {
                     path: "/cinema",
@@ -72,6 +72,10 @@ const CineMavericksContainer = () => {
                         highestRatedMovies={highestRatedMovies}
                         movieLists={movieLists}
                     />
+                },
+                {
+                    path: "/login",
+                    element: <UserList users={users} />
                 },
                 {                  
                     path: "/user/:userId/cinema", 
