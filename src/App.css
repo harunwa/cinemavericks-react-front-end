@@ -4,4 +4,10 @@ body {
 }
 
 
-
+footer {
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}

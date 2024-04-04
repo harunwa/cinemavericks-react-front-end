@@ -12,6 +12,9 @@ function App() {
       <body>
         <CineMavericksContainer />
       </body>
+      <footer>
+          Made With ❤️ by the Cinemarvs Team ©️
+      </footer>
     </>
   );
 }
