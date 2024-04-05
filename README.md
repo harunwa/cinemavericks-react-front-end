@@ -42,6 +42,7 @@ This front-end project utilises JavaScript and the React library to create a dyn
 
 ### Wireframe
 
+Can be viewed here: https://github.com/Jean-005/cinemavericks-react-front-end/blob/main/Wireframe.png
 
 
 ### Component diagram
