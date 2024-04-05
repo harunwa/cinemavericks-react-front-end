@@ -49,7 +49,7 @@ Can be viewed here: https://github.com/Jean-005/cinemavericks-react-front-end/bl
 
 ### Component diagram
 
-
+Can ve viewed here: https://github.com/Jean-005/cinemavericks-react-front-end/blob/main/ComponentDiagram.png
 
 
 ### The URL of the GitHub repository that contains the code:
