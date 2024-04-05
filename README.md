@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Cinemavericks</h1>
+<h1 align="center" id="title">CineMavericks</h1>
 
 ## Table of Contents
 1. [Project Description](#project-description)
