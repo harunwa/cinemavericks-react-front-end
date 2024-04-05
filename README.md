@@ -1,5 +1,9 @@
 <h1 align="center" id="title">CineMavericks</h1>
 
+<img src="file:///Users/lauraharper/Downloads/9e4d5f3a-173c-4b36-8c3d-0bc9024e699f.jpeg"
+     alt="Cinema Axolotl"
+     style="float: left; margin-right: 10px;" />
+
 ## Table of Contents
 1. [Project Description](#project-description)
 2. [Installation instructions](#installation-instructions)
