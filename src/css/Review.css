@@ -1,5 +1,7 @@
 #delete_button button {
     background-color: white;
+    border: 2px solid #84acce;
+    border-radius: 15%;
     color: #c9463a;
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
@@ -9,6 +11,8 @@
 
 #edit_button button {
     background-color: white;
+    border: 2px solid #84acce;
+    border-radius: 15%;
     color: #0d3895;
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
