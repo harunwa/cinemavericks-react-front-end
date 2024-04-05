@@ -1,5 +1,7 @@
 <h1 align="center" id="title">CineMavericks</h1>
 
+![cinema axolotl](file:///Users/lauraharper/Downloads/9e4d5f3a-173c-4b36-8c3d-0bc9024e699f.jpeg)
+
 ## Table of Contents
 1. [Project Description](#project-description)
 2. [Installation instructions](#installation-instructions)
@@ -42,6 +44,7 @@ This front-end project utilises JavaScript and the React library to create a dyn
 
 ### Wireframe
 
+Can be viewed here: https://github.com/Jean-005/cinemavericks-react-front-end/blob/main/Wireframe.png
 
 
 ### Component diagram
