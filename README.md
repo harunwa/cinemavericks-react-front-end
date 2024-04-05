@@ -117,6 +117,15 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 - Vivian - Github: https://github.com/viviann-1
 - Jean Marwizi 	- Github: https://github.com/Jean-005
 
+### The Cinemavericks Backend Team:
+- Gabriel Dzharadat
+- Monesha Dhali
+- Leila Peltier
+- Tommy Bui
+- Zarrin Rahman
+
+**For creating the API used in this project.**
+
 ### Special thanks to:
 
 - Anna Henderson
