@@ -33,11 +33,10 @@ This front-end project utilises JavaScript and the React library to create a dyn
 ### Extensions
 
 - Be able to filter by genre, minimum duration, and minimum rating.
-- A 'My Reviews' page where users can view, edit or delete reviews for specific movies.
+- Add functionality so that users can view, edit or delete reviews for specific movies.
 - A page that shows all the public movies lists. 
 - Add CRUD functionality for movie list.
 - Add CRUD functionality for users list.
-- Add capability to allow users to change default language from English.
 - Add darkmode/light mode functionality.
 
 
