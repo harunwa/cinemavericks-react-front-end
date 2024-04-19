@@ -52,9 +52,9 @@ Can be viewed here: https://github.com/Jean-005/cinemavericks-react-front-end/bl
 Can ve viewed here: https://github.com/Jean-005/cinemavericks-react-front-end/blob/main/ComponentDiagram.png
 
 
-### The URL of the GitHub repository that contains the code:
+### The URL of the GitHub repository that contains the API:
 
-https://github.com/Jean-005/cinemavericks-react-front-end
+[https://github.com/Jean-005/cinemavericks-react-front-end](https://github.com/Jean-005/Cinemavericks_back-end)
 
 
 ## Installation instructions
